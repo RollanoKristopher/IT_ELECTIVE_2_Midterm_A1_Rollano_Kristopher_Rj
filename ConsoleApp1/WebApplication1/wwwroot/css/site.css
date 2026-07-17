@@ -29,3 +29,34 @@ body {
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
   text-align: start;
 }
+
+    /* 📊 RANDOM EQUALIZER BARS */
+    /* Note the double @@ symbols */
+    @@keyframes scaleUp {
+        0%, 100% {
+            transform: scaleY(0.1);
+        }
+
+        50% {
+            transform: scaleY(1);
+        }
+    }
+ 
+    .equalizer-container {
+        display: inline-flex;
+        align-items: flex-end;
+        gap: 3px;
+        height: 40px; /* Maximum height of the equalizer */
+        margin-left: 15px;
+        vertical-align: middle;
+    }
+
+    .equalizer-bar {
+        width: 4px;
+        height: 100%;
+        background: linear-gradient(to top, #3b82f6, #6366f1);
+        border-radius: 2px;
+        transform-origin: bottom;
+        animation: scaleUp 1.2s ease-in-out infinite;
+    
+    }
