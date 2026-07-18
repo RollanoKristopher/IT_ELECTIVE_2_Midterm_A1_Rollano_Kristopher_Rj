@@ -1,0 +1,62 @@
+﻿@{
+    ViewData["Title"] = ViewData["Title"];
+}
+
+<footer class="footer pt-5 pb-4 border-top border-secondary border-opacity-10">
+
+    <div class="row g-4 text-start">
+
+        <!-- Location -->
+        <div class="col-lg-4">
+            <h5 class="text-white fw-bold mb-3">Location</h5>
+            <p class="small lh-base">
+                @ViewData["Location"]
+            </p>
+        </div>
+
+        <!-- Social -->
+        <div class="col-lg-4">
+            <h5 class="text-white fw-bold mb-3">Around the Web</h5>
+            <div class="d-flex gap-2">
+
+                <a class="btn btn-outline-secondary btn-sm text-white"
+                   href="@ViewData["Facebook"]">
+                    <i class="fab fa-fw fa-facebook-f"></i>
+                </a>
+
+                <a class="btn btn-outline-secondary btn-sm text-white"
+                   href="@ViewData["GitHub"]" target="_blank">
+                    <i class="fab fa-fw fa-github"></i>
+                </a>
+
+                <a class="btn btn-outline-secondary btn-sm text-white"
+                   href="@ViewData["Microsoft"]">
+                    <i class="fab fa-fw fa-microsoft"></i>
+                </a>
+
+                <a class="btn btn-outline-secondary btn-sm text-white"
+                   href="@ViewData["LinkedIn"]">
+                    <i class="fab fa-fw fa-linkedin-in"></i>
+                </a>
+
+            </div>
+        </div>
+
+        <!-- Dev Focus -->
+        <div class="col-lg-4">
+            <h5 class="text-white fw-bold mb-3">Development Focus</h5>
+            <p class="small lh-base">
+                @ViewData["DevFocus"]
+            </p>
+        </div>
+
+    </div>
+
+    <!-- Copyright -->
+    <div class="text-center pt-4 mt-4 border-top border-secondary border-opacity-10">
+        <small class="text-white-50">
+            @ViewData["Copyright"]
+        </small>
+    </div>
+
+</footer>

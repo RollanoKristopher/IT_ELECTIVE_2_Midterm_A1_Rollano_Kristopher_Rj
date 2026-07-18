@@ -1,7 +1,9 @@
-﻿
+﻿@{
+    ViewData["Title"] = "Home";
+}
 
-<!-- HOME SECTION -->
-<section id="home" class="fade-in page-section text-white mb-5 d-flex flex-column justify-content-center align-items-center text-center py-5">
+
+<section class="fade-in page-section text-white mb-5 d-flex flex-column justify-content-center align-items-center text-center py-5">
     <div class="card-modern p-5 d-flex flex-column align-items-center w-100 max-width-800">
         <img src="@Url.Content("~/images/profile/KRR.jpg")"
              class="img-fluid rounded-circle profile-img mb-4"
@@ -9,7 +11,7 @@
              height="220"
              alt="Kristopher Rollano">
 
-            <h1 class="fw-bold display-5 mb-2"">Kristopher Rj L. Rollano</h1>
+            <h1 class="fw-bold display-5 mb-2">Kristopher Rj L. Rollano</h1>
             
             <h4 class="mb-4 fw-normal">Software Web Developer</h4>
  
@@ -24,300 +26,23 @@
             Welcome to my professional application portfolio. I specialize in backend logic architectures and modern layout implementations.
         </p>
         <div class="d-flex justify-content-center gap-3 mt-4">
-            <a href="#projects" class="btn btn-primary px-4 py-2">View Projects</a>
-            <a href="#contact" class="btn btn-outline-light px-4 py-2">Contact Me</a>
+          
+            <a asp-controller="Home" asp-action="Projects" class="btn btn-primary px-4 py-2">View Projects</a>
+            <a asp-controller="Home" asp-action="Contact" class="btn btn-primary px-4 py-2">Contact Me</a>
+           
         </div>
 
         
     </div>
 </section>
 
-<!-- ABOUT ME SECTION -->
-<section id="about" class="fade-in page-section mb-5">
-    <div class="card-modern p-5">
-        <h2 class="text-center text-uppercase fw-bold mb-3">About Me</h2>
 
-        <div class="d-flex align-items-center justify-content-center mb-5">
-            <hr class="flex-grow-1 accent-hr" style="max-width: 100px;">
-            <i class="fa-solid fa-star mx-3"></i>
-            <hr class="flex-grow-1 accent-hr" style="max-width: 100px;">
-        </div>
 
-        <div class="row g-4">
-            <div class="col-lg-6">
-                <h5 class="text-primary mb-3"><i class="fa-solid fa-graduation-cap me-2"></i>Biography & Education</h5>
-                <p class="lh-lg">
-                    I am a student at Lyceum of Alabang pursuing a Bachelor of Science degree in Information Technology.
-                    Throughout my academic journey, I have focused heavily on object-oriented programming methodologies and web architectures.
-                    I thoroughly enjoy creating responsive web applications and discovering modern frontend libraries.
-                </p>
-            </div>
-            <div class="col-lg-6">
-                <h5 class="text-primary mb-3"><i class="fa-solid fa-bullseye me-2"></i>Career Goals & Interests</h5>
-                <p class="lh-lg">
-                    My core ambition is to establish myself as a professional full-stack software developer, contributing to high-performance enterprise applications.
-                    Outside of my formal development studies, I stay involved in tech trends by exploring automated tools, debugging legacy frameworks, and playing competitive video games.
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
 
-<!-- SKILLS SECTION -->
-<section id="skills" class="fade-in mb-5 page-section">
-    <h2 class="fw-bold mb-2">Technical Skills</h2>
-    <p class="mb-4">A summary of core technologies, tools, and platforms I work with.</p>
 
-    <div class="row g-4">
-        <!-- Programming Languages -->
-        <div class="col-md-3">
-            <div class="card-modern h-100">
-                <div class="card-body">
-                    <div class="text-primary fs-3 mb-3"><i class="fa-solid fa-code"></i></div>
-                    <h5 class="fw-bold">Programming</h5>
-                    <p class="m-0 mt-2">C#, VB.NET, Python</p>
-                </div>
-            </div>
-        </div>
 
-        <!-- Web Technologies -->
-        <div class="col-md-3">
-            <div class="card-modern h-100">
-                <div class="card-body">
-                    <div class="text-primary fs-3 mb-3"><i class="fa-solid fa-globe"></i></div>
-                    <h5 class="fw-bold">Web</h5>
-                    <p class="m-0 mt-2">HTML, CSS, JavaScript, Bootstrap, W3.CSS</p>
-                </div>
-            </div>
-        </div>
 
-        <!-- Databases -->
-        <div class="col-md-3">
-            <div class="card-modern h-100">
-                <div class="card-body">
-                    <div class="text-primary fs-3 mb-3"><i class="fa-solid fa-database"></i></div>
-                    <h5 class="fw-bold">Database</h5>
-                    <p class="m-0 mt-2">MySQL, MS Access, SQL Server, XAMPP</p>
-                </div>
-            </div>
-        </div>
 
-        <!-- Development Tools -->
-        <div class="col-md-3">
-            <div class="card-modern h-100">
-                <div class="card-body">
-                    <div class="text-primary fs-3 mb-3"><i class="fa-solid fa-screwdriver-wrench"></i></div>
-                    <h5 class="fw-bold">Tools</h5>
-                    <p class="m-0 mt-2">Visual Studio 2026 / 2022, VS Code, GitHub</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- PROJECTS SECTION -->
-<section id="projects" class="fade-in mb-5 page-section">
-    <h2 class="fw-bold mb-2">Projects Portfolio</h2>
-    <p class="mb-4">Demonstrated repository configurations highlighting my coding structure and architecture implementations.</p>
-
-    <div class="row g-4">
-        <!-- Project 1 -->
-        <div class="col-md-4">
-            <div class="card-modern h-100 d-flex flex-column justify-content-between">
-                <div>
-             
-                    <img src="@Url.Content("~/images/projects/Fizzbuzz.png")"
-                         class="img-fluid w-100 card-img-top"
-                         style="height: 180px; object-fit: contain; background: #1e293b; padding: 10px;"
-                         alt="Fizzbuzz Application">
-                    <div class="card-body pb-0">
-                        <h5 class="fw-bold">FizzBuzz Application</h5>
-                        <p class="small text-truncate-2 mt-2">A clean implementation logic project executing iterative problem sets.</p>
-                        <p class="mt-2 mb-0"><small class="text-white-50"><strong>Tech Stack:</strong> C# Core</small></p>
-                    </div>
-                </div>
-                <div class="card-body pt-3">
-                    <a href="https://github.com/RollanoKristopher/BSIT31E1_PRELIM_A1_Rollano_Kristopher-Rj.git" target="_blank" class="btn btn-sm btn-outline-primary w-100 text-truncate"><i class="fa-brands fa-github me-1"></i>View Repository</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Project 2 -->
-        <div class="col-md-4">
-            <div class="card-modern h-100 d-flex flex-column justify-content-between">
-                <div>
-                    
-                    <img src="@Url.Content("~/images/projects/Calculator.png")"
-                         class="img-fluid w-100 card-img-top"
-                         style="height: 180px; object-fit: contain; background: #1e293b; padding: 10px;"
-                         alt="Console Calculator">
-                    <div class="card-body pb-0">
-                        <h5 class="fw-bold">Console Calculator</h5>
-                        <p class="small text-truncate-2 mt-2">Mathematical processing application parsing conditions and basic operations cleanly.</p>
-                        <p class="mt-2 mb-0"><small class="text-white-50"><strong>Tech Stack:</strong> C#</small></p>
-                    </div>
-                </div>
-                <div class="card-body pt-3">
-                    <a href="https://github.com/RollanoKristopher/BSIT31E1_PRELIM_A2_Rollano_Kristopher-Rj.git" target="_blank" class="btn btn-sm btn-outline-primary w-100 text-truncate"><i class="fa-brands fa-github me-1"></i>View Repository</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Project 3 -->
-        <div class="col-md-4">
-            <div class="card-modern h-100 d-flex flex-column justify-content-between">
-                <div>
-                    <!-- Change your image tags to this: -->
-                    <img src="@Url.Content("~/images/projects/SMS.png")"
-                         class="img-fluid w-100 card-img-top"
-                         style="height: 180px; object-fit: contain; background: #1e293b; padding: 10px;"
-                         alt="Student Management">
-                    <div class="card-body pb-0">
-                        <h5 class="fw-bold">Student Management</h5>
-                        <p class="small text-truncate-2 mt-2">A workflow tracking system managing object collections and persistent records securely.</p>
-                        <p class="mt-2 mb-0"><small class="text-white-50"><strong>Tech Stack:</strong> C# Data Layers</small></p>
-                    </div>
-                </div>
-                <div class="card-body pt-3">
-                    <a href="https://github.com/RollanoKristopher/BSIT31E1_Prelim_H1_Rollano_Kristopher-Rj.git" target="_blank" class="btn btn-sm btn-outline-primary w-100 text-truncate"><i class="fa-brands fa-github me-1"></i>View Repository</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Star Break Separator between grid rows -->
-    <div class="d-flex align-items-center justify-content-center my-5">
-        <hr class="flex-grow-1 accent-hr">
-        <i class="fa-solid fa-star mx-3"></i>
-        <hr class="flex-grow-1 accent-hr">
-    </div>
-
-    <div class="row g-4">
-        <!-- Project 4 -->
-        <div class="col-md-4">
-            <div class="card-modern h-100 d-flex flex-column justify-content-between">
-                <div>
-                    <img src="@Url.Content("~/images/projects/File Ingestion Engine.png")" class="img-fluid w-100 card-img-top" style="height: 150px; object-fit: cover;" alt="File Ingestion Engine">
-                    <div class="card-body pb-0">
-                        <h5 class="fw-bold">File Ingestion Engine</h5>
-                        <p class="small text-truncate-2 mt-2">High-performance data stream parsing engine sorting document objects dynamically.</p>
-                        <p class="mt-2 mb-0"><small class="text-white-50"><strong>Tech Stack:</strong> C# IO Streams</small></p>
-                    </div>
-                </div>
-                <div class="card-body pt-3">
-                    <a href="https://github.com/RollanoKristopher/BSIT31E1_PRELIM_H2_Rollano_KristopherRj.git" target="_blank" class="btn btn-sm btn-outline-primary w-100 text-truncate"><i class="fa-brands fa-github me-1"></i>View Repository</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Project 5 -->
-        <div class="col-md-4">
-            <div class="card-modern h-100 d-flex flex-column justify-content-between">
-                <div>
-                    <img src="@Url.Content("~/images/projects/HttpServer and Client.png")" class="img-fluid w-100 card-img-top" style="height: 150px; object-fit: cover;" alt="HttpServer and Client">
-                    <div class="card-body pb-0">
-                        <h5 class="fw-bold">Custom HTTP System</h5>
-                        <p class="small text-truncate-2 mt-2">Low-level network client and socket listener simulated to handle discrete request calls.</p>
-                        <p class="mt-2 mb-0"><small class="text-white-50"><strong>Tech Stack:</strong> C# Networking</small></p>
-                    </div>
-                </div>
-                <div class="card-body pt-3">
-                    <a href="https://github.com/RollanoKristopher/BSIT31E1_PRELIM_A3_Rollano_Kristopher-Rj.git" target="_blank" class="btn btn-sm btn-outline-primary w-100 text-truncate"><i class="fa-brands fa-github me-1"></i>View Repository</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Project 6 -->
-        <div class="col-md-4">
-            <div class="card-modern h-100 d-flex flex-column justify-content-between">
-                <div>
-                    <img src="@Url.Content("~/images/projects/Transport Resolver Challenge.png")" class="img-fluid w-100 card-img-top" style="height: 150px; object-fit: cover;" alt="Transport Resolver Challenge">
-                    <div class="card-body pb-0">
-                        <h5 class="fw-bold">Transport Resolver</h5>
-                        <p class="small text-truncate-2 mt-2">Algorithm challenge mapping optimized route calculations and node pathways.</p>
-                        <p class="mt-2 mb-0"><small class="text-white-50"><strong>Tech Stack:</strong> Data Structures</small></p>
-                    </div>
-                </div>
-                <div class="card-body pt-3">
-                    <a href="https://github.com/RollanoKristopher/BSIT_31E1_PRELIM_Q1_Rollano_Kristopher_Rj.git" target="_blank" class="btn btn-sm btn-outline-primary w-100 text-truncate"><i class="fa-brands fa-github me-1"></i>View Repository</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- CONTACT SECTION -->
-<section id="contact" class="fade-in mb-5 page-section">
-    <div class="card-modern p-5 text-center">
-        <h2 class="fw-bold text-uppercase mb-4">Contact</h2>
-        <p class="col-md-6 mx-auto mb-5">Feel free to connect with me directly through my email or professional networking pipelines.</p>
-
-        <div class="row row-cols-1 row-cols-md-3 g-4 mb-5">
-            <div class="col">
-                <div class="p-3 border border-secondary border-opacity-25 rounded-3 bg-dark bg-opacity-20">
-                    <i class="fa-solid fa-envelope text-primary fs-3 mb-2"></i>
-                    <h6 class="mb-1">Email</h6>
-                    <a href="mailto:kristopherrjrollano@gmail.com" class="text-white text-decoration-none small">kristopherrjrollano@gmail.com</a>
-                </div>
-            </div>
-            <div class="col">
-                <div class="p-3 border border-secondary border-opacity-25 rounded-3 bg-dark bg-opacity-20">
-                    <i class="fa-solid fa-phone text-primary fs-3 mb-2"></i>
-                    <h6 class="mb-1">Mobile Number</h6>
-                    <span class="text-white small">0991-402-6896</span>
-                </div>
-            </div>
-            <div class="col">
-                <div class="p-3 border border-secondary border-opacity-25 rounded-3 bg-dark bg-opacity-20">
-                    <i class="fa-brands fa-github text-primary fs-3 mb-2"></i>
-                    <h6 class="mb-1">GitHub</h6>
-                    <a href="https://github.com/RollanoKristopher" target="_blank" class="text-white text-decoration-none small">github.com/RollanoKristopher</a>
-                </div>
-            </div>
-        </div>
-
-       
-  
-    </div>
-</section>
-
-<!-- FOOTER AND COPYRIGHT INFORMATION -->
-<footer class="footer pt-5 pb-4 border-top border-secondary border-opacity-10 ">
-    <div class="row g-4 text-start">
-        <div class="col-lg-4">
-            <h5 class="text-white fw-bold mb-3">Location</h5>
-            <p class="small lh-base">
-                834 Prk 6 San Roque San Pedro Laguna<br />
-                Philippines, 4023
-            </p>
-        </div>
-
-        <div class="col-lg-4">
-            <h5 class="text-white fw-bold mb-3">Around the Web</h5>
-            <div class="d-flex gap-2">
-                <a class="btn btn-outline-secondary btn-sm text-white" href="#!"><i class="fab fa-fw fa-facebook-f"></i></a>
-                <a class="btn btn-outline-secondary btn-sm text-white" href="https://github.com/RollanoKristopher" target="_blank" title="GitHub">
-                    <i class="fab fa-fw fa-github"></i>
-                </a>
-                <a class="btn btn-outline-secondary btn-sm text-white" href="#!" title="Visual Studio">
-                    <i class="fab fa-fw fa-microsoft"></i>
-                </a>
-                <a class="btn btn-outline-secondary btn-sm text-white" href="#!"><i class="fab fa-fw fa-linkedin-in"></i></a>
-            </div>
-        </div>
-
-        <div class="col-lg-4">
-            <h5 class="text-white fw-bold mb-3">Development Focus</h5>
-            <p class="small lh-base">
-                Building structured applications emphasizing software paradigms, MVC conventions, clean layouts, and comprehensive platform delivery.
-            </p>
-        </div>
-    </div>
-
-    <div class="text-center pt-4 mt-4 border-top border-secondary border-opacity-10">
-        <small class="text-white-50">Copyright &copy; Kristopher Rollano 2026</small>
-    </div>
-</footer>
 
 
   

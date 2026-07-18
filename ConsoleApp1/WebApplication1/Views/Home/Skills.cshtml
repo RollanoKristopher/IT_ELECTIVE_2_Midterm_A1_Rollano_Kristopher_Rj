@@ -1,0 +1,65 @@
+﻿@{
+    ViewData["Title"] = ViewData["Title"];
+}
+
+<section class="fade-in mb-5 page-section">
+
+    <h2 class="fw-bold mb-2">@ViewData["SectionTitle"]</h2>
+    <p class="mb-4">@ViewData["SectionDesc"]</p>
+
+    <div class="row g-4">
+
+        <!-- Programming -->
+        <div class="col-md-3">
+            <div class="card-modern h-100">
+                <div class="card-body">
+                    <div class="text-primary fs-3 mb-3">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <h5 class="fw-bold">@ViewData["ProgTitle"]</h5>
+                    <p class="m-0 mt-2">@ViewData["ProgContent"]</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Web -->
+        <div class="col-md-3">
+            <div class="card-modern h-100">
+                <div class="card-body">
+                    <div class="text-primary fs-3 mb-3">
+                        <i class="fa-solid fa-globe"></i>
+                    </div>
+                    <h5 class="fw-bold">@ViewData["WebTitle"]</h5>
+                    <p class="m-0 mt-2">@ViewData["WebContent"]</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Database -->
+        <div class="col-md-3">
+            <div class="card-modern h-100">
+                <div class="card-body">
+                    <div class="text-primary fs-3 mb-3">
+                        <i class="fa-solid fa-database"></i>
+                    </div>
+                    <h5 class="fw-bold">@ViewData["DbTitle"]</h5>
+                    <p class="m-0 mt-2">@ViewData["DbContent"]</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tools -->
+        <div class="col-md-3">
+            <div class="card-modern h-100">
+                <div class="card-body">
+                    <div class="text-primary fs-3 mb-3">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                    </div>
+                    <h5 class="fw-bold">@ViewData["ToolsTitle"]</h5>
+                    <p class="m-0 mt-2">@ViewData["ToolsContent"]</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>

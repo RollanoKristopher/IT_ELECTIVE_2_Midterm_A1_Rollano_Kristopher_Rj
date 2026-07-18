@@ -1,0 +1,57 @@
+﻿@{
+    ViewData["Title"] = ViewData["Title"];
+}
+
+<section class="fade-in mb-5 page-section">
+    <div class="card-modern p-5 text-center">
+
+        <h2 class="fw-bold text-uppercase mb-4">
+            @ViewData["SectionTitle"]
+        </h2>
+
+        <p class="col-md-6 mx-auto mb-5">
+            @ViewData["SectionDesc"]
+        </p>
+
+        <div class="row row-cols-1 row-cols-md-3 g-4 mb-5">
+
+            <!-- Email -->
+            <div class="col">
+                <div class="p-3 border border-secondary border-opacity-25 rounded-3 bg-dark bg-opacity-20">
+                    <i class="fa-solid fa-envelope text-primary fs-3 mb-2"></i>
+                    <h6 class="mb-1">Email</h6>
+                    <a href="mailto:@ViewData["Email"]"
+                       class="text-white text-decoration-none small">
+                        @ViewData["Email"]
+                    </a>
+                </div>
+            </div>
+
+            <!-- Phone -->
+            <div class="col">
+                <div class="p-3 border border-secondary border-opacity-25 rounded-3 bg-dark bg-opacity-20">
+                    <i class="fa-solid fa-phone text-primary fs-3 mb-2"></i>
+                    <h6 class="mb-1">Mobile Number</h6>
+                    <span class="text-white small">
+                        @ViewData["Phone"]
+                    </span>
+                </div>
+            </div>
+
+            <!-- GitHub -->
+            <div class="col">
+                <div class="p-3 border border-secondary border-opacity-25 rounded-3 bg-dark bg-opacity-20">
+                    <i class="fa-brands fa-github text-primary fs-3 mb-2"></i>
+                    <h6 class="mb-1">GitHub</h6>
+                    <a href="@ViewData["GitHub"]"
+                       target="_blank"
+                       class="text-white text-decoration-none small">
+                        @ViewData["GitHub"]
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
