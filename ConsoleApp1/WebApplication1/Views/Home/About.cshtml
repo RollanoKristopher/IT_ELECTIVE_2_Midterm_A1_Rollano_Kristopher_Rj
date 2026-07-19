@@ -1,40 +1,44 @@
-﻿@{
-    ViewData["Title"] = ViewData["Title"];
-}
-
-<section class="fade-in page-section mb-5">
-    <div class="card-modern p-5">
+﻿<section class="fade-in page-section mb-5">
+    <div class="card-modern p-5 shadow-lg">
 
         <h2 class="text-center text-uppercase fw-bold mb-3">
             @ViewData["Title"]
         </h2>
 
         <div class="d-flex align-items-center justify-content-center mb-5">
-            <hr class="flex-grow-1 accent-hr" style="max-width: 100px;">
+            <hr class="flex-grow-1 accent-hr" style="max-width:100px;">
             <i class="fa-solid fa-star mx-3"></i>
-            <hr class="flex-grow-1 accent-hr" style="max-width: 100px;">
+            <hr class="flex-grow-1 accent-hr" style="max-width:100px;">
         </div>
 
         <div class="row g-4">
+
             <div class="col-lg-6">
+
                 <h5 class="text-primary mb-3">
                     <i class="fa-solid fa-graduation-cap me-2"></i>
-                    @ViewData["BioTitle"]
+                    Biography & Education
                 </h5>
+
                 <p class="lh-lg">
-                    @ViewData["BioContent"]
+                    @ViewData["Biography"]
                 </p>
+
             </div>
 
             <div class="col-lg-6">
+
                 <h5 class="text-primary mb-3">
                     <i class="fa-solid fa-bullseye me-2"></i>
-                    @ViewData["GoalTitle"]
+                    Career Goals & Interests
                 </h5>
+
                 <p class="lh-lg">
-                    @ViewData["GoalContent"]
+                    @ViewData["Goals"]
                 </p>
+
             </div>
+
         </div>
 
     </div>

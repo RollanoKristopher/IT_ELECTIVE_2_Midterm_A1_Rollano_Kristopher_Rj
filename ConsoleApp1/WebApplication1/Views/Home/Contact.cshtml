@@ -1,25 +1,25 @@
-﻿@{
-    ViewData["Title"] = ViewData["Title"];
-}
-
+﻿<!-- CONTACT SECTION -->
 <section class="fade-in mb-5 page-section">
     <div class="card-modern p-5 text-center">
 
         <h2 class="fw-bold text-uppercase mb-4">
-            @ViewData["SectionTitle"]
+            @ViewData["Title"]
         </h2>
 
         <p class="col-md-6 mx-auto mb-5">
-            @ViewData["SectionDesc"]
+            @ViewData["Description"]
         </p>
 
+        <!-- Contact Cards -->
         <div class="row row-cols-1 row-cols-md-3 g-4 mb-5">
 
             <!-- Email -->
             <div class="col">
-                <div class="p-3 border border-secondary border-opacity-25 rounded-3 bg-dark bg-opacity-20">
-                    <i class="fa-solid fa-envelope text-primary fs-3 mb-2"></i>
-                    <h6 class="mb-1">Email</h6>
+                <div class="p-4 border border-secondary border-opacity-25 rounded-3 bg-dark bg-opacity-20 h-100">
+                    <i class="fa-solid fa-envelope text-primary fs-2 mb-3"></i>
+
+                    <h6 class="mb-2">Email</h6>
+
                     <a href="mailto:@ViewData["Email"]"
                        class="text-white text-decoration-none small">
                         @ViewData["Email"]
@@ -29,9 +29,11 @@
 
             <!-- Phone -->
             <div class="col">
-                <div class="p-3 border border-secondary border-opacity-25 rounded-3 bg-dark bg-opacity-20">
-                    <i class="fa-solid fa-phone text-primary fs-3 mb-2"></i>
-                    <h6 class="mb-1">Mobile Number</h6>
+                <div class="p-4 border border-secondary border-opacity-25 rounded-3 bg-dark bg-opacity-20 h-100">
+                    <i class="fa-solid fa-phone text-primary fs-2 mb-3"></i>
+
+                    <h6 class="mb-2">Mobile Number</h6>
+
                     <span class="text-white small">
                         @ViewData["Phone"]
                     </span>
@@ -40,16 +42,43 @@
 
             <!-- GitHub -->
             <div class="col">
-                <div class="p-3 border border-secondary border-opacity-25 rounded-3 bg-dark bg-opacity-20">
-                    <i class="fa-brands fa-github text-primary fs-3 mb-2"></i>
-                    <h6 class="mb-1">GitHub</h6>
-                    <a href="@ViewData["GitHub"]"
+                <div class="p-4 border border-secondary border-opacity-25 rounded-3 bg-dark bg-opacity-20 h-100">
+                    <i class="fa-brands fa-github text-primary fs-2 mb-3"></i>
+
+                    <h6 class="mb-2">GitHub</h6>
+
+                    <a href="@ViewData["GitHubLink"]"
                        target="_blank"
                        class="text-white text-decoration-none small">
-                        @ViewData["GitHub"]
+                        @ViewData["GitHubName"]
                     </a>
                 </div>
             </div>
+
+        </div>
+
+        <!-- Buttons -->
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+
+            <a href="mailto:@ViewData["Email"]"
+               class="btn btn-primary px-4">
+                <i class="fa-solid fa-envelope me-2"></i>
+                Email Me
+            </a>
+
+            <a href="@ViewData["GitHubLink"]"
+               target="_blank"
+               class="btn btn-outline-light px-4">
+                <i class="fa-brands fa-github me-2"></i>
+                GitHub
+            </a>
+
+            <a href="@ViewData["Resume"]"
+               class="btn btn-success"
+               download>
+                <i class="fa-solid fa-download me-2"></i>
+                Download Resume
+            </a>
 
         </div>
 

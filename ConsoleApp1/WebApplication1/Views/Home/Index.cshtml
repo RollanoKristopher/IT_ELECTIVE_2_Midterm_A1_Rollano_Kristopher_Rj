@@ -1,20 +1,15 @@
-﻿@{
-    ViewData["Title"] = "Home";
-}
-
-
-<section class="fade-in page-section text-white mb-5 d-flex flex-column justify-content-center align-items-center text-center py-5">
+﻿<section class="fade-in page-section text-white mb-5 d-flex flex-column justify-content-center align-items-center text-center py-5">
     <div class="card-modern p-5 d-flex flex-column align-items-center w-100 max-width-800">
+
         <img src="@Url.Content("~/images/profile/KRR.jpg")"
              class="img-fluid rounded-circle profile-img mb-4"
              width="220"
              height="220"
-             alt="Kristopher Rollano">
+             alt="@ViewData["Name"]">
 
-            <h1 class="fw-bold display-5 mb-2">Kristopher Rj L. Rollano</h1>
-            
-            <h4 class="mb-4 fw-normal">Software Web Developer</h4>
- 
+        <h1 class="fw-bold display-5 mb-2">@ViewData["Name"]</h1>
+
+        <h4 class="mb-4 fw-normal">@ViewData["Position"]</h4>
 
         <div class="w-50 d-flex align-items-center justify-content-center my-3">
             <hr class="flex-grow-1 accent-hr">
@@ -23,19 +18,25 @@
         </div>
 
         <p class="lead col-lg-8 mx-auto mb-4">
-            Welcome to my professional application portfolio. I specialize in backend logic architectures and modern layout implementations.
+            @ViewData["Description"]
         </p>
+
         <div class="d-flex justify-content-center gap-3 mt-4">
-          
-            <a asp-controller="Home" asp-action="Projects" class="btn btn-primary px-4 py-2">View Projects</a>
-            <a asp-controller="Home" asp-action="Contact" class="btn btn-primary px-4 py-2">Contact Me</a>
-           
+            <a asp-controller="Home"
+               asp-action="Projects"
+               class="btn btn-primary px-4 py-2">
+                View Projects
+            </a>
+
+            <a asp-controller="Home"
+               asp-action="Contact"
+               class="btn btn-outline-light px-4 py-2">
+                Contact Me
+            </a>
         </div>
 
-        
     </div>
 </section>
-
 
 
 

@@ -1,65 +1,105 @@
-﻿@{
-    ViewData["Title"] = ViewData["Title"];
-}
+﻿<section class="fade-in mb-5 page-section">
 
-<section class="fade-in mb-5 page-section">
+    <h2 class="fw-bold mb-2">@ViewData["Title"]</h2>
 
-    <h2 class="fw-bold mb-2">@ViewData["SectionTitle"]</h2>
-    <p class="mb-4">@ViewData["SectionDesc"]</p>
+    <p class="mb-5">@ViewData["Description"]</p>
 
     <div class="row g-4">
 
         <!-- Programming -->
-        <div class="col-md-3">
-            <div class="card-modern h-100">
-                <div class="card-body">
-                    <div class="text-primary fs-3 mb-3">
-                        <i class="fa-solid fa-code"></i>
-                    </div>
-                    <h5 class="fw-bold">@ViewData["ProgTitle"]</h5>
-                    <p class="m-0 mt-2">@ViewData["ProgContent"]</p>
+        <div class="col-lg-6 col-xl-3">
+            <div class="card-modern h-100 text-center p-4">
+
+                <div class="display-5 text-primary mb-3">
+                    <i class="fa-solid fa-code"></i>
                 </div>
+
+                <h4 class="fw-bold mb-3">@ViewData["ProgrammingTitle"]</h4>
+
+                <p class="text-white-50 mb-4">
+                    @ViewData["ProgrammingDescription"]
+                </p>
+
+                <div class="d-flex flex-wrap justify-content-center gap-2">
+                    <span class="badge bg-primary">C#</span>
+                    <span class="badge bg-secondary">VB.NET</span>
+                    <span class="badge bg-success">Python</span>
+                </div>
+
             </div>
         </div>
 
         <!-- Web -->
-        <div class="col-md-3">
-            <div class="card-modern h-100">
-                <div class="card-body">
-                    <div class="text-primary fs-3 mb-3">
-                        <i class="fa-solid fa-globe"></i>
-                    </div>
-                    <h5 class="fw-bold">@ViewData["WebTitle"]</h5>
-                    <p class="m-0 mt-2">@ViewData["WebContent"]</p>
+        <div class="col-lg-6 col-xl-3">
+            <div class="card-modern h-100 text-center p-4">
+
+                <div class="display-5 text-primary mb-3">
+                    <i class="fa-solid fa-globe"></i>
                 </div>
+
+                <h4 class="fw-bold mb-3">@ViewData["WebTitle"]</h4>
+
+                <p class="text-white-50 mb-4">
+                    @ViewData["WebDescription"]
+                </p>
+
+                <div class="d-flex flex-wrap justify-content-center gap-2">
+                    <span class="badge bg-danger">HTML</span>
+                    <span class="badge bg-info">CSS</span>
+                    <span class="badge bg-warning text-dark">JavaScript</span>
+                    <span class="badge bg-primary">Bootstrap</span>
+                </div>
+
             </div>
         </div>
 
         <!-- Database -->
-        <div class="col-md-3">
-            <div class="card-modern h-100">
-                <div class="card-body">
-                    <div class="text-primary fs-3 mb-3">
-                        <i class="fa-solid fa-database"></i>
-                    </div>
-                    <h5 class="fw-bold">@ViewData["DbTitle"]</h5>
-                    <p class="m-0 mt-2">@ViewData["DbContent"]</p>
+        <div class="col-lg-6 col-xl-3">
+            <div class="card-modern h-100 text-center p-4">
+
+                <div class="display-5 text-primary mb-3">
+                    <i class="fa-solid fa-database"></i>
                 </div>
+
+                <h4 class="fw-bold mb-3">@ViewData["DatabaseTitle"]</h4>
+
+                <p class="text-white-50 mb-4">
+                    @ViewData["DatabaseDescription"]
+                </p>
+
+                <div class="d-flex flex-wrap justify-content-center gap-2">
+                    <span class="badge bg-primary">MySQL</span>
+                    <span class="badge bg-success">SQL Server</span>
+                    <span class="badge bg-secondary">MS Access</span>
+                </div>
+
             </div>
         </div>
 
         <!-- Tools -->
-        <div class="col-md-3">
-            <div class="card-modern h-100">
-                <div class="card-body">
-                    <div class="text-primary fs-3 mb-3">
-                        <i class="fa-solid fa-screwdriver-wrench"></i>
-                    </div>
-                    <h5 class="fw-bold">@ViewData["ToolsTitle"]</h5>
-                    <p class="m-0 mt-2">@ViewData["ToolsContent"]</p>
+        <div class="col-lg-6 col-xl-3">
+            <div class="card-modern h-100 text-center p-4">
+
+                <div class="display-5 text-primary mb-3">
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
                 </div>
+
+                <h4 class="fw-bold mb-3">@ViewData["ToolsTitle"]</h4>
+
+                <p class="text-white-50 mb-4">
+                    @ViewData["ToolsDescription"]
+                </p>
+
+                <div class="d-flex flex-wrap justify-content-center gap-2">
+                    <span class="badge bg-primary">Visual Studio</span>
+                    <span class="badge bg-dark">VS Code</span>
+                    <span class="badge bg-secondary">Git</span>
+                    <span class="badge bg-success">GitHub</span>
+                </div>
+
             </div>
         </div>
 
     </div>
+
 </section>

@@ -1,62 +1,76 @@
-﻿@{
-    ViewData["Title"] = ViewData["Title"];
-}
+﻿
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<footer class="footer pt-5 pb-4 border-top border-secondary border-opacity-10 mt-5">
 
-<footer class="footer pt-5 pb-4 border-top border-secondary border-opacity-10">
+    <div class="container-fluid">
 
-    <div class="row g-4 text-start">
+        <div class="row g-4 align-items-start">
 
-        <!-- Location -->
-        <div class="col-lg-4">
-            <h5 class="text-white fw-bold mb-3">Location</h5>
-            <p class="small lh-base">
-                @ViewData["Location"]
-            </p>
-        </div>
+            <!-- Location -->
+            <div class="col-lg-4 text-center text-lg-start">
+                <h5 class="text-white fw-bold mb-3">Location</h5>
 
-        <!-- Social -->
-        <div class="col-lg-4">
-            <h5 class="text-white fw-bold mb-3">Around the Web</h5>
-            <div class="d-flex gap-2">
-
-                <a class="btn btn-outline-secondary btn-sm text-white"
-                   href="@ViewData["Facebook"]">
-                    <i class="fab fa-fw fa-facebook-f"></i>
-                </a>
-
-                <a class="btn btn-outline-secondary btn-sm text-white"
-                   href="@ViewData["GitHub"]" target="_blank">
-                    <i class="fab fa-fw fa-github"></i>
-                </a>
-
-                <a class="btn btn-outline-secondary btn-sm text-white"
-                   href="@ViewData["Microsoft"]">
-                    <i class="fab fa-fw fa-microsoft"></i>
-                </a>
-
-                <a class="btn btn-outline-secondary btn-sm text-white"
-                   href="@ViewData["LinkedIn"]">
-                    <i class="fab fa-fw fa-linkedin-in"></i>
-                </a>
-
+                <p class="small lh-base">
+                    @ViewData["Location"]
+                </p>
             </div>
-        </div>
 
-        <!-- Dev Focus -->
-        <div class="col-lg-4">
-            <h5 class="text-white fw-bold mb-3">Development Focus</h5>
-            <p class="small lh-base">
-                @ViewData["DevFocus"]
-            </p>
-        </div>
+            <!-- Around the Web -->
+            <div class="col-lg-4 text-center">
+                <h5 class="text-white fw-bold mb-3">Around the Web</h5>
 
+                <div class="d-flex justify-content-center gap-2">
+
+                    <a class="btn btn-outline-secondary btn-sm text-white"
+                       href="@ViewData["Facebook"]"
+                       target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+
+                    <a class="btn btn-outline-secondary btn-sm text-white"
+                       href="@ViewData["GitHub"]"
+                       target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+
+                    <a class="btn btn-outline-secondary btn-sm text-white"
+                       href="@ViewData["Microsoft"]"
+                       target="_blank">
+                        <i class="fab fa-microsoft"></i>
+                    </a>
+
+                    <a class="btn btn-outline-secondary btn-sm text-white"
+                       href="@ViewData["LinkedIn"]"
+                       target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+
+                </div>
+            </div>
+
+            <!-- Development Focus -->
+            <div class="col-lg-4">
+    <div class="text-center">
+        <h5 class="text-white fw-bold mb-3">Development Focus</h5>
+
+        <p class="small lh-lg mx-auto mb-0" style="max-width:300px;">
+            @ViewData["DevFocus"]
+        </p>
     </div>
+</div>
 
-    <!-- Copyright -->
-    <div class="text-center pt-4 mt-4 border-top border-secondary border-opacity-10">
-        <small class="text-white-50">
-            @ViewData["Copyright"]
-        </small>
+        </div>
+
+        <hr class="border-secondary border-opacity-25 my-4" />
+
+        <div class="text-center">
+            <small class="text-white-50">
+                @ViewData["Copyright"]
+            </small>
+        </div>
+
     </div>
 
 </footer>

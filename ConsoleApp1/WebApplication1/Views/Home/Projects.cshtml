@@ -1,174 +1,293 @@
-﻿@{
-    ViewData["Title"] = "Projects";
-}
+﻿<h2 class="fw-bold mb-2">@ViewData["Title"]</h2>
 
+<p class="mb-4">@ViewData["Description"]</p>
+<!-- Project 1 -->
 
-<section  class="fade-in mb-5 page-section">
-    <h2 class="fw-bold mb-2">Projects Portfolio</h2>
-    <p class="mb-4">Demonstrated repository configurations highlighting my coding structure and architecture implementations.</p>
+<div class="row g-4">
+    <div class="col-md-4">
+    <div class="card-modern h-100 d-flex flex-column justify-content-between">
+        <div>
+            <img src="@Url.Content("~/images/projects/Fizzbuzz.png")"
+                 class="img-fluid w-100 card-img-top"
+                 style="height: 180px; object-fit: contain; background: #1e293b; padding: 10px;"
+                 alt="@ViewData["Project1Name"]">
 
-    <div class="row g-4">
-        <!-- Project 1 -->
-        <div class="col-md-4">
-            <div class="card-modern h-100 d-flex flex-column justify-content-between">
-                <div>
+            <div class="card-body pb-0">
+                <h5 class="fw-bold">@ViewData["Project1Name"]</h5>
 
-                    <img src="@Url.Content("~/images/projects/Fizzbuzz.png")"
-                         class="img-fluid w-100 card-img-top"
-                         style="height: 180px; object-fit: contain; background: #1e293b; padding: 10px;"
-                         alt="Fizzbuzz Application">
-                    <div class="card-body pb-0">
-                        <h5 class="fw-bold">FizzBuzz Application</h5>
-                        <p class="small text-truncate-2 mt-2">A clean implementation logic project executing iterative problem sets.</p>
-                        <p class="mt-2 mb-0"><small class="text-white-50"><strong>Tech Stack:</strong> C# Core</small></p>
-                    </div>
-                </div>
-                <div class="card-body pt-3">
-                    <a href="https://github.com/RollanoKristopher/BSIT31E1_PRELIM_A1_Rollano_Kristopher-Rj.git" target="_blank" class="btn btn-sm btn-outline-primary w-100 text-truncate"><i class="fa-brands fa-github me-1"></i>View Repository</a>
-                </div>
+                <p class="small text-truncate-2 mt-2">
+                    @ViewData["Project1Description"]
+                </p>
+
+                <p class="mt-2 mb-0">
+                    <small class="text-white-50">
+                        <strong>Tech Stack:</strong> @ViewData["Project1Tech"]
+                    </small>
+                </p>
             </div>
         </div>
 
-        <!-- Project 2 -->
-        <div class="col-md-4">
-            <div class="card-modern h-100 d-flex flex-column justify-content-between">
-                <div>
-
-                    <img src="@Url.Content("~/images/projects/Calculator.png")"
-                         class="img-fluid w-100 card-img-top"
-                         style="height: 180px; object-fit: contain; background: #1e293b; padding: 10px;"
-                         alt="Console Calculator">
-                    <div class="card-body pb-0">
-                        <h5 class="fw-bold">Console Calculator</h5>
-                        <p class="small text-truncate-2 mt-2">Mathematical processing application parsing conditions and basic operations cleanly.</p>
-                        <p class="mt-2 mb-0"><small class="text-white-50"><strong>Tech Stack:</strong> C#</small></p>
-                    </div>
-                </div>
-                <div class="card-body pt-3">
-                    <a href="https://github.com/RollanoKristopher/BSIT31E1_PRELIM_A2_Rollano_Kristopher-Rj.git" target="_blank" class="btn btn-sm btn-outline-primary w-100 text-truncate"><i class="fa-brands fa-github me-1"></i>View Repository</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Project 3 -->
-        <div class="col-md-4">
-            <div class="card-modern h-100 d-flex flex-column justify-content-between">
-                <div>
-                   
-                    <img src="@Url.Content("~/images/projects/SMS.png")"
-                         class="img-fluid w-100 card-img-top"
-                         style="height: 180px; object-fit: contain; background: #1e293b; padding: 10px;"
-                         alt="Student Management">
-                    <div class="card-body pb-0">
-                        <h5 class="fw-bold">Student Management</h5>
-                        <p class="small text-truncate-2 mt-2">A workflow tracking system managing object collections and persistent records securely.</p>
-                        <p class="mt-2 mb-0"><small class="text-white-50"><strong>Tech Stack:</strong> C# Data Layers</small></p>
-                    </div>
-                </div>
-                <div class="card-body pt-3">
-                    <a href="https://github.com/RollanoKristopher/BSIT31E1_Prelim_H1_Rollano_Kristopher-Rj.git" target="_blank" class="btn btn-sm btn-outline-primary w-100 text-truncate"><i class="fa-brands fa-github me-1"></i>View Repository</a>
-                </div>
-            </div>
+        <div class="card-body pt-3">
+            <a href="@ViewData["Project1Link"]"
+               target="_blank"
+               class="btn btn-sm btn-outline-primary w-100 text-truncate">
+                <i class="fa-brands fa-github me-1"></i>View Repository
+            </a>
         </div>
     </div>
+</div>
 
-    <!-- Star Break Separator between grid rows -->
-    <div class="d-flex align-items-center justify-content-center my-5">
-        <hr class="flex-grow-1 accent-hr">
-        <i class="fa-solid fa-star mx-3"></i>
-        <hr class="flex-grow-1 accent-hr">
-    </div>
 
-    <div class="row g-4">
-        <!-- Project 4 -->
-        <div class="col-md-4">
-            <div class="card-modern h-100 d-flex flex-column justify-content-between">
-                <div>
-                    <img src="@Url.Content("~/images/projects/File Ingestion Engine.png")" class="img-fluid w-100 card-img-top" style="height: 150px; object-fit: cover;" alt="File Ingestion Engine">
-                    <div class="card-body pb-0">
-                        <h5 class="fw-bold">File Ingestion Engine</h5>
-                        <p class="small text-truncate-2 mt-2">High-performance data stream parsing engine sorting document objects dynamically.</p>
-                        <p class="mt-2 mb-0"><small class="text-white-50"><strong>Tech Stack:</strong> C# IO Streams</small></p>
-                    </div>
-                </div>
-                <div class="card-body pt-3">
-                    <a href="https://github.com/RollanoKristopher/BSIT31E1_PRELIM_H2_Rollano_KristopherRj.git" target="_blank" class="btn btn-sm btn-outline-primary w-100 text-truncate"><i class="fa-brands fa-github me-1"></i>View Repository</a>
-                </div>
+<!-- Project 2 -->
+<div class="col-md-4">
+    <div class="card-modern h-100 d-flex flex-column justify-content-between">
+        <div>
+            <img src="@Url.Content("~/images/projects/Calculator.png")"
+                 class="img-fluid w-100 card-img-top"
+                 style="height: 180px; object-fit: contain; background: #1e293b; padding: 10px;"
+                 alt="@ViewData["Project2Name"]">
+
+            <div class="card-body pb-0">
+                <h5 class="fw-bold">@ViewData["Project2Name"]</h5>
+
+                <p class="small text-truncate-2 mt-2">
+                    @ViewData["Project2Description"]
+                </p>
+
+                <p class="mt-2 mb-0">
+                    <small class="text-white-50">
+                        <strong>Tech Stack:</strong> @ViewData["Project2Tech"]
+                    </small>
+                </p>
             </div>
         </div>
 
-        <!-- Project 5 -->
-        <div class="col-md-4">
-            <div class="card-modern h-100 d-flex flex-column justify-content-between">
-                <div>
-                    <img src="@Url.Content("~/images/projects/HttpServer and Client.png")" class="img-fluid w-100 card-img-top" style="height: 150px; object-fit: cover;" alt="HttpServer and Client">
-                    <div class="card-body pb-0">
-                        <h5 class="fw-bold">Custom HTTP System</h5>
-                        <p class="small text-truncate-2 mt-2">Low-level network client and socket listener simulated to handle discrete request calls.</p>
-                        <p class="mt-2 mb-0"><small class="text-white-50"><strong>Tech Stack:</strong> C# Networking</small></p>
-                    </div>
-                </div>
-                <div class="card-body pt-3">
-                    <a href="https://github.com/RollanoKristopher/BSIT31E1_PRELIM_A3_Rollano_Kristopher-Rj.git" target="_blank" class="btn btn-sm btn-outline-primary w-100 text-truncate"><i class="fa-brands fa-github me-1"></i>View Repository</a>
-                </div>
+        <div class="card-body pt-3">
+            <a href="@ViewData["Project2Link"]"
+               target="_blank"
+               class="btn btn-sm btn-outline-primary w-100 text-truncate">
+                <i class="fa-brands fa-github me-1"></i>View Repository
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<!-- Project 3 -->
+<div class="col-md-4">
+    <div class="card-modern h-100 d-flex flex-column justify-content-between">
+        <div>
+            <img src="@Url.Content("~/images/projects/SMS.png")"
+                 class="img-fluid w-100 card-img-top"
+                 style="height: 180px; object-fit: contain; background: #1e293b; padding: 10px;"
+                 alt="@ViewData["Project3Name"]">
+
+            <div class="card-body pb-0">
+                <h5 class="fw-bold">@ViewData["Project3Name"]</h5>
+
+                <p class="small text-truncate-2 mt-2">
+                    @ViewData["Project3Description"]
+                </p>
+
+                <p class="mt-2 mb-0">
+                    <small class="text-white-50">
+                        <strong>Tech Stack:</strong> @ViewData["Project3Tech"]
+                    </small>
+                </p>
             </div>
         </div>
 
-        <!-- Project 6 -->
-        <div class="col-md-4">
-            <div class="card-modern h-100 d-flex flex-column justify-content-between">
-                <div>
-                    <img src="@Url.Content("~/images/projects/Transport Resolver Challenge.png")" class="img-fluid w-100 card-img-top" style="height: 150px; object-fit: cover;" alt="Transport Resolver Challenge">
-                    <div class="card-body pb-0">
-                        <h5 class="fw-bold">Transport Resolver</h5>
-                        <p class="small text-truncate-2 mt-2">Algorithm challenge mapping optimized route calculations and node pathways.</p>
-                        <p class="mt-2 mb-0"><small class="text-white-50"><strong>Tech Stack:</strong> Data Structures</small></p>
-                    </div>
-                </div>
-                <div class="card-body pt-3">
-                    <a href="https://github.com/RollanoKristopher/BSIT_31E1_PRELIM_Q1_Rollano_Kristopher_Rj.git" target="_blank" class="btn btn-sm btn-outline-primary w-100 text-truncate"><i class="fa-brands fa-github me-1"></i>View Repository</a>
-                </div>
+        <div class="card-body pt-3">
+            <a href="@ViewData["Project3Link"]"
+               target="_blank"
+               class="btn btn-sm btn-outline-primary w-100 text-truncate">
+                <i class="fa-brands fa-github me-1"></i>View Repository
+            </a>
+        </div>
+    </div>
+</div>
+</div>
+<br/>
+<!-- Project 4 -->
+<div class="row g-4">
+    <div class="col-md-4">
+
+    <div class="card-modern h-100 d-flex flex-column justify-content-between">
+
+        <div>
+
+            <img src="@Url.Content("~/images/projects/File Ingestion Engine.png")"
+                 class="img-fluid w-100 card-img-top"
+                 style="height:150px; object-fit:cover;"
+                 alt="@ViewData["Project4Name"]">
+
+
+
+            <div class="card-body pb-0">
+
+                <h5 class="fw-bold">@ViewData["Project4Name"]</h5>
+
+
+
+                <p class="small text-truncate-2 mt-2">
+
+                    @ViewData["Project4Description"]
+
+                </p>
+
+
+
+                <p class="mt-2 mb-0">
+
+                    <small class="text-white-50">
+
+                        <strong>Tech Stack:</strong> @ViewData["Project4Tech"]
+
+                    </small>
+
+                </p>
+
             </div>
+
         </div>
+
+
+
+        <div class="card-body pt-3">
+
+            <a href="@ViewData["Project4Link"]"
+               target="_blank"
+               class="btn btn-sm btn-outline-primary w-100 text-truncate">
+
+                <i class="fa-brands fa-github me-1"></i>View Repository
+
+            </a>
+
+        </div>
+
     </div>
-</section>
+
+</div>
+
+<!-- Project 5 -->
+
+<div class="col-md-4">
+
+    <div class="card-modern h-100 d-flex flex-column justify-content-between">
+
+        <div>
+
+            <img src="@Url.Content("~/images/projects/HttpServer and Client.png")"
+                 class="img-fluid w-100 card-img-top"
+                 style="height:150px; object-fit:cover;"
+                 alt="@ViewData["Project5Name"]">
 
 
 
-<footer class="footer pt-5 pb-4 border-top border-secondary border-opacity-10 ">
-    <div class="row g-4 text-start">
-        <div class="col-lg-4">
-            <h5 class="text-white fw-bold mb-3">Location</h5>
-            <p class="small lh-base">
-                834 Prk 6 San Roque San Pedro Laguna<br />
-                Philippines, 4023
-            </p>
-        </div>
+            <div class="card-body pb-0">
 
-        <div class="col-lg-4">
-            <h5 class="text-white fw-bold mb-3">Around the Web</h5>
-            <div class="d-flex gap-2">
-                <a class="btn btn-outline-secondary btn-sm text-white" href="#!"><i class="fab fa-fw fa-facebook-f"></i></a>
-                <a class="btn btn-outline-secondary btn-sm text-white" href="https://github.com/RollanoKristopher" target="_blank" title="GitHub">
-                    <i class="fab fa-fw fa-github"></i>
-                </a>
-                <a class="btn btn-outline-secondary btn-sm text-white" href="#!" title="Visual Studio">
-                    <i class="fab fa-fw fa-microsoft"></i>
-                </a>
-                <a class="btn btn-outline-secondary btn-sm text-white" href="#!"><i class="fab fa-fw fa-linkedin-in"></i></a>
+                <h5 class="fw-bold">@ViewData["Project5Name"]</h5>
+
+
+
+                <p class="small text-truncate-2 mt-2">
+
+                    @ViewData["Project5Description"]
+
+                </p>
+
+
+
+                <p class="mt-2 mb-0">
+
+                    <small class="text-white-50">
+
+                        <strong>Tech Stack:</strong> @ViewData["Project5Tech"]
+
+                    </small>
+
+                </p>
+
             </div>
+
         </div>
 
-        <div class="col-lg-4">
-            <h5 class="text-white fw-bold mb-3">Development Focus</h5>
-            <p class="small lh-base">
-                Building structured applications emphasizing software paradigms, MVC conventions, clean layouts, and comprehensive platform delivery.
-            </p>
+
+
+        <div class="card-body pt-3">
+
+            <a href="@ViewData["Project5Link"]"
+               target="_blank"
+               class="btn btn-sm btn-outline-primary w-100 text-truncate">
+
+                <i class="fa-brands fa-github me-1"></i>View Repository
+
+            </a>
+
         </div>
+
     </div>
 
-    <div class="text-center pt-4 mt-4 border-top border-secondary border-opacity-10">
-        <small class="text-white-50">Copyright &copy; Kristopher Rollano 2026</small>
-    </div>
-</footer>
+</div>
 
+<!-- Project 6 -->
+
+<div class="col-md-4">
+
+    <div class="card-modern h-100 d-flex flex-column justify-content-between">
+
+        <div>
+
+            <img src="@Url.Content("~/images/projects/Transport Resolver Challenge.png")"
+                 class="img-fluid w-100 card-img-top"
+                 style="height:150px; object-fit:cover;"
+                 alt="@ViewData["Project6Name"]">
+
+
+
+            <div class="card-body pb-0">
+
+                <h5 class="fw-bold">@ViewData["Project6Name"]</h5>
+
+
+
+                <p class="small text-truncate-2 mt-2">
+
+                    @ViewData["Project6Description"]
+
+                </p>
+
+
+
+                <p class="mt-2 mb-0">
+
+                    <small class="text-white-50">
+
+                        <strong>Tech Stack:</strong> @ViewData["Project6Tech"]
+
+                    </small>
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="card-body pt-3">
+
+            <a href="@ViewData["Project6Link"]"
+               target="_blank"
+               class="btn btn-sm btn-outline-primary w-100 text-truncate">
+
+                <i class="fa-brands fa-github me-1"></i>View Repository
+
+            </a>
+
+        </div>
+
+    </div>
+
+    </div>
+</div>
